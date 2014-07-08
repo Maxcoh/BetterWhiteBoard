@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1493F5196593410057CAA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1493F4196593410057CAA8 /* Foundation.framework */; };
+		FB1493F7196593410057CAA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1493F6196593410057CAA8 /* CoreGraphics.framework */; };
+		FB1493F9196593410057CAA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1493F8196593410057CAA8 /* UIKit.framework */; };
+		FB1493FF196593410057CAA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB1493FD196593410057CAA8 /* InfoPlist.strings */; };
+		FB149401196593410057CAA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB149400196593410057CAA8 /* main.m */; };
+		FB149405196593410057CAA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB149404196593410057CAA8 /* AppDelegate.m */; };
+		FB149408196593410057CAA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB149406196593410057CAA8 /* Main.storyboard */; };
+		FB14940B196593410057CAA8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14940A196593410057CAA8 /* ViewController.m */; };
+		FB14940D196593410057CAA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB14940C196593410057CAA8 /* Images.xcassets */; };
+		FB149414196593420057CAA8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB149413196593420057CAA8 /* XCTest.framework */; };
+		FB149415196593420057CAA8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1493F4196593410057CAA8 /* Foundation.framework */; };
+		FB149416196593420057CAA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1493F8196593410057CAA8 /* UIKit.framework */; };
+		FB14941E196593420057CAA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB14941C196593420057CAA8 /* InfoPlist.strings */; };
+		FB149420196593420057CAA8 /* BetterWhiteboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14941F196593420057CAA8 /* BetterWhiteboardTests.m */; };
+		FB14942B19659A100057CAA8 /* ColoredBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14942A19659A100057CAA8 /* ColoredBezierPath.m */; };
+		FB14943519659E030057CAA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB14943419659E030057CAA8 /* Social.framework */; };
+		FB14943E1965ACD60057CAA8 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14943D1965ACD60057CAA8 /* DrawingView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB149417196593420057CAA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB1493E9196593410057CAA8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB1493F0196593410057CAA8;
+			remoteInfo = BetterWhiteboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB1493F1196593410057CAA8 /* BetterWhiteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterWhiteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1493F4196593410057CAA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB1493F6196593410057CAA8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB1493F8196593410057CAA8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB1493FC196593410057CAA8 /* BetterWhiteboard-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterWhiteboard-Info.plist"; sourceTree = "<group>"; };
+		FB1493FE196593410057CAA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB149400196593410057CAA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB149402196593410057CAA8 /* BetterWhiteboard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BetterWhiteboard-Prefix.pch"; sourceTree = "<group>"; };
+		FB149403196593410057CAA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB149404196593410057CAA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB149407196593410057CAA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB149409196593410057CAA8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB14940A196593410057CAA8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB14940C196593410057CAA8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB149412196593420057CAA8 /* BetterWhiteboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterWhiteboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB149413196593420057CAA8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB14941B196593420057CAA8 /* BetterWhiteboardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BetterWhiteboardTests-Info.plist"; sourceTree = "<group>"; };
+		FB14941D196593420057CAA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB14941F196593420057CAA8 /* BetterWhiteboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterWhiteboardTests.m; sourceTree = "<group>"; };
+		FB14942919659A100057CAA8 /* ColoredBezierPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredBezierPath.h; sourceTree = "<group>"; };
+		FB14942A19659A100057CAA8 /* ColoredBezierPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredBezierPath.m; sourceTree = "<group>"; };
+		FB14943419659E030057CAA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FB14943C1965ACD60057CAA8 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		FB14943D1965ACD60057CAA8 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB1493EE196593410057CAA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB14943519659E030057CAA8 /* Social.framework in Frameworks */,
+				FB1493F7196593410057CAA8 /* CoreGraphics.framework in Frameworks */,
+				FB1493F9196593410057CAA8 /* UIKit.framework in Frameworks */,
+				FB1493F5196593410057CAA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB14940F196593420057CAA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB149414196593420057CAA8 /* XCTest.framework in Frameworks */,
+				FB149416196593420057CAA8 /* UIKit.framework in Frameworks */,
+				FB149415196593420057CAA8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB1493E8196593410057CAA8 = {
+			isa = PBXGroup;
+			children = (
+				FB1493FA196593410057CAA8 /* BetterWhiteboard */,
+				FB149419196593420057CAA8 /* BetterWhiteboardTests */,
+				FB1493F3196593410057CAA8 /* Frameworks */,
+				FB1493F2196593410057CAA8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB1493F2196593410057CAA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB1493F1196593410057CAA8 /* BetterWhiteboard.app */,
+				FB149412196593420057CAA8 /* BetterWhiteboardTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB1493F3196593410057CAA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB14943419659E030057CAA8 /* Social.framework */,
+				FB1493F4196593410057CAA8 /* Foundation.framework */,
+				FB1493F6196593410057CAA8 /* CoreGraphics.framework */,
+				FB1493F8196593410057CAA8 /* UIKit.framework */,
+				FB149413196593420057CAA8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB1493FA196593410057CAA8 /* BetterWhiteboard */ = {
+			isa = PBXGroup;
+			children = (
+				FB14943019659A920057CAA8 /* Views */,
+				FB14942D19659A580057CAA8 /* Classes */,
+				FB14942F19659A7B0057CAA8 /* Delegates */,
+				FB149406196593410057CAA8 /* Main.storyboard */,
+				FB14942E19659A720057CAA8 /* View Controllers */,
+				FB14940C196593410057CAA8 /* Images.xcassets */,
+				FB1493FB196593410057CAA8 /* Supporting Files */,
+			);
+			path = BetterWhiteboard;
+			sourceTree = "<group>";
+		};
+		FB1493FB196593410057CAA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB1493FC196593410057CAA8 /* BetterWhiteboard-Info.plist */,
+				FB1493FD196593410057CAA8 /* InfoPlist.strings */,
+				FB149400196593410057CAA8 /* main.m */,
+				FB149402196593410057CAA8 /* BetterWhiteboard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB149419196593420057CAA8 /* BetterWhiteboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB14941F196593420057CAA8 /* BetterWhiteboardTests.m */,
+				FB14941A196593420057CAA8 /* Supporting Files */,
+			);
+			path = BetterWhiteboardTests;
+			sourceTree = "<group>";
+		};
+		FB14941A196593420057CAA8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB14941B196593420057CAA8 /* BetterWhiteboardTests-Info.plist */,
+				FB14941C196593420057CAA8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB14942D19659A580057CAA8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FB14942919659A100057CAA8 /* ColoredBezierPath.h */,
+				FB14942A19659A100057CAA8 /* ColoredBezierPath.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FB14942E19659A720057CAA8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FB149409196593410057CAA8 /* ViewController.h */,
+				FB14940A196593410057CAA8 /* ViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FB14942F19659A7B0057CAA8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				FB149403196593410057CAA8 /* AppDelegate.h */,
+				FB149404196593410057CAA8 /* AppDelegate.m */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		FB14943019659A920057CAA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB14943C1965ACD60057CAA8 /* DrawingView.h */,
+				FB14943D1965ACD60057CAA8 /* DrawingView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB1493F0196593410057CAA8 /* BetterWhiteboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB149423196593420057CAA8 /* Build configuration list for PBXNativeTarget "BetterWhiteboard" */;
+			buildPhases = (
+				FB1493ED196593410057CAA8 /* Sources */,
+				FB1493EE196593410057CAA8 /* Frameworks */,
+				FB1493EF196593410057CAA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterWhiteboard;
+			productName = BetterWhiteboard;
+			productReference = FB1493F1196593410057CAA8 /* BetterWhiteboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB149411196593420057CAA8 /* BetterWhiteboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB149426196593420057CAA8 /* Build configuration list for PBXNativeTarget "BetterWhiteboardTests" */;
+			buildPhases = (
+				FB14940E196593420057CAA8 /* Sources */,
+				FB14940F196593420057CAA8 /* Frameworks */,
+				FB149410196593420057CAA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB149418196593420057CAA8 /* PBXTargetDependency */,
+			);
+			name = BetterWhiteboardTests;
+			productName = BetterWhiteboardTests;
+			productReference = FB149412196593420057CAA8 /* BetterWhiteboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB1493E9196593410057CAA8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Brendan Barnes";
+				TargetAttributes = {
+					FB149411196593420057CAA8 = {
+						TestTargetID = FB1493F0196593410057CAA8;
+					};
+				};
+			};
+			buildConfigurationList = FB1493EC196593410057CAA8 /* Build configuration list for PBXProject "BetterWhiteboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB1493E8196593410057CAA8;
+			productRefGroup = FB1493F2196593410057CAA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB1493F0196593410057CAA8 /* BetterWhiteboard */,
+				FB149411196593420057CAA8 /* BetterWhiteboardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB1493EF196593410057CAA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB14940D196593410057CAA8 /* Images.xcassets in Resources */,
+				FB1493FF196593410057CAA8 /* InfoPlist.strings in Resources */,
+				FB149408196593410057CAA8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB149410196593420057CAA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB14941E196593420057CAA8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB1493ED196593410057CAA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB14942B19659A100057CAA8 /* ColoredBezierPath.m in Sources */,
+				FB14940B196593410057CAA8 /* ViewController.m in Sources */,
+				FB149405196593410057CAA8 /* AppDelegate.m in Sources */,
+				FB14943E1965ACD60057CAA8 /* DrawingView.m in Sources */,
+				FB149401196593410057CAA8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB14940E196593420057CAA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB149420196593420057CAA8 /* BetterWhiteboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB149418196593420057CAA8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB1493F0196593410057CAA8 /* BetterWhiteboard */;
+			targetProxy = FB149417196593420057CAA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB1493FD196593410057CAA8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB1493FE196593410057CAA8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB149406196593410057CAA8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB149407196593410057CAA8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB14941C196593420057CAA8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB14941D196593420057CAA8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB149421196593420057CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB149422196593420057CAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB149424196593420057CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterWhiteboard/BetterWhiteboard-Prefix.pch";
+				INFOPLIST_FILE = "BetterWhiteboard/BetterWhiteboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB149425196593420057CAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterWhiteboard/BetterWhiteboard-Prefix.pch";
+				INFOPLIST_FILE = "BetterWhiteboard/BetterWhiteboard-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB149427196593420057CAA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BetterWhiteboard.app/BetterWhiteboard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterWhiteboard/BetterWhiteboard-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BetterWhiteboardTests/BetterWhiteboardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB149428196593420057CAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BetterWhiteboard.app/BetterWhiteboard";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BetterWhiteboard/BetterWhiteboard-Prefix.pch";
+				INFOPLIST_FILE = "BetterWhiteboardTests/BetterWhiteboardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB1493EC196593410057CAA8 /* Build configuration list for PBXProject "BetterWhiteboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB149421196593420057CAA8 /* Debug */,
+				FB149422196593420057CAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB149423196593420057CAA8 /* Build configuration list for PBXNativeTarget "BetterWhiteboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB149424196593420057CAA8 /* Debug */,
+				FB149425196593420057CAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB149426196593420057CAA8 /* Build configuration list for PBXNativeTarget "BetterWhiteboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB149427196593420057CAA8 /* Debug */,
+				FB149428196593420057CAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB1493E9196593410057CAA8 /* Project object */;
+}
