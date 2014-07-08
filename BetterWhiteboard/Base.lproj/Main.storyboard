@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-LX-nGX">
-                                <rect key="frame" x="51" y="536" width="118" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-LX-nGX">
+                                <rect key="frame" x="83" y="530" width="155" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="changeSize:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pd7-07-NGv"/>
@@ -29,7 +29,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1v-6P-0as">
-                                <rect key="frame" x="-8" y="448" width="30" height="162"/>
+                                <rect key="frame" x="-3" y="448" width="30" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="vXZ-lx-hvc" id="DLK-nv-XuZ"/>
@@ -37,22 +37,32 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOu-71-V4b">
-                                <rect key="frame" x="228" y="524" width="46" height="42"/>
+                                <rect key="frame" x="264" y="524" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="eraser">
+                                <state key="normal" backgroundImage="Eraser_Icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="changePathColor:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UrQ-fA-Cgy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwx-ey-oLs">
+                                <rect key="frame" x="20" y="530" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Undo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="undo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NSb-0Z-PwW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Whiteboard" id="uep-sK-43c">
-                        <barButtonItem key="leftBarButtonItem" systemItem="undo" id="BeO-0Y-1Kb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="5TH-l9-1Mx">
                             <connections>
-                                <action selector="undo:" destination="vXZ-lx-hvc" id="Vvu-w1-qpf"/>
+                                <action selector="save:" destination="vXZ-lx-hvc" id="BBU-jp-5Fz"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="SOJ-N5-9Ay">
@@ -90,7 +100,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="eraser" width="50" height="50"/>
+        <image name="Eraser_Icon" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

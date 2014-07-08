@@ -17,7 +17,7 @@
     if(self)
     {
         _paths = [[NSMutableArray alloc] init];
-        _pathColor = [UIColor blueColor];
+        _pathColor = [UIColor purpleColor];
         _pathWidth = 5;
     }
     
@@ -85,6 +85,7 @@
                          //after the view has completed its animation
                          //remove all paths from the _paths array, then refresh the veiw
                          [_paths removeAllObjects];
+                         self.backgroundColor = [UIColor whiteColor];
                          [self setNeedsDisplay];
                          //make the view visible again
                          [self setAlpha:1];

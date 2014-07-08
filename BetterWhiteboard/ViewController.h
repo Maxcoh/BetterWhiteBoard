@@ -23,5 +23,7 @@
 
 - (IBAction)changePathColor:(id)sender;
 - (IBAction)changeSize:(id)sender;
+- (IBAction)undo:(id)sender;
+- (IBAction)save:(id)sender;
 
 @end

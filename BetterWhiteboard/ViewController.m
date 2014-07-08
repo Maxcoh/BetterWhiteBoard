@@ -14,14 +14,16 @@
 
 @implementation ViewController
 
--(void)viewDidLoad{
+-(void)viewDidLoad
+{
     [super viewDidLoad];
     self.tags = [[NSArray alloc] initWithObjects:@"Blue", @"Red", @"Yellow", @"Green", @"Purple", @"Black", @"Orange", @"Gray", nil];
     self.picker.showsSelectionIndicator =YES;
     CGAffineTransform rotate = CGAffineTransformMakeRotation(-3.14/2);
     rotate = CGAffineTransformScale(rotate, 0.25, 2.0);
     [self.picker setTransform:rotate];
-}
+    [self.picker selectRow:((self.tags.count)/2) inComponent:0 animated:NO];
+} 
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
@@ -46,7 +48,8 @@
     return self.tags.count;
 }
 
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
     return 1;
 }
 
@@ -98,13 +101,6 @@
     return 25.0;
 }
 
-- (IBAction)undo:(id)sender {
-    //removes last path from _paths
-    [_drawView.paths removeLastObject];
-    //refreshes the view
-    [_drawView setNeedsDisplay];
-}
-
 - (IBAction)changePathColor:(UIButton *)sender
 {
     [_drawView setPathColor:[UIColor whiteColor]];
@@ -115,7 +111,28 @@
     _drawView.pathWidth = sender.value;
 }
 
-- (IBAction)cameraPressed:(id)sender {
+- (IBAction)undo:(id)sender
+{
+    //removes last path from _paths
+    [_drawView.paths removeLastObject];
+    //refreshes the view
+    [_drawView setNeedsDisplay];
+}
+
+- (IBAction)save:(id)sender
+{
+    UIGraphicsBeginImageContext(_drawView.bounds.size);
+    [_drawView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil);
+}
+
+- (IBAction)cameraPressed:(id)sender
+{
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload a picture" message:nil delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:@"Take a photo", @"Choose existing", nil];
     alert.alertViewStyle = UIAlertViewStyleDefault;
@@ -164,8 +181,10 @@
     [image drawInRect:rect];
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    [_drawView.paths removeAllObjects];
     _drawView.backgroundColor = [UIColor colorWithPatternImage:image];
     [self dismissViewControllerAnimated:YES completion:NULL];
+    [_drawView setNeedsDisplay];
     
    
 }
