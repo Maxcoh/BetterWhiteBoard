@@ -19,6 +19,7 @@
 @property (strong, nonatomic) NSArray *colors;
 @property (strong, nonatomic) NSArray *tags;
 @property (strong, nonatomic) NSString *selectedColor;
+@property (strong, nonatomic) UILabel *label;
 
 
 - (IBAction)changePathColor:(id)sender;

@@ -17,19 +17,36 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tags = [[NSArray alloc] initWithObjects:@"Blue", @"Red", @"Yellow", @"Green", @"Purple", @"Black", @"Orange", @"Gray", nil];
+    //fills array with names of all colors available, for labels in picker view
+    self.tags = [[NSArray alloc] initWithObjects:@"Red", @"Orange", @"Yellow", @"Green", @"Blue", @"Indigo", @"Violet", @"Gray", @"Black", @"Pink", @"Brown", nil];
+    
+    //populates colors array with UIColor objects accompanying the names above, same index
+    self.colors = [[NSArray alloc] initWithObjects:[UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor colorWithRed:(87.0/255.0) green:(201.0/255.0) blue:(21.0/255.0) alpha:1], [UIColor blueColor], [UIColor colorWithRed:(75.0/255.0) green:(0.0/255.0) blue:(130.0/255.0) alpha:1], [UIColor purpleColor], [UIColor grayColor], [UIColor blackColor], [UIColor colorWithRed:(255.0/255.0) green:(105.0/255.0) blue:(180.0/255.0) alpha:1], [UIColor brownColor], nil];
+    
+    //rotates picker view so that it is horizontal instead of vertical
     self.picker.showsSelectionIndicator =YES;
     CGAffineTransform rotate = CGAffineTransformMakeRotation(-3.14/2);
     rotate = CGAffineTransformScale(rotate, 0.25, 2.0);
     [self.picker setTransform:rotate];
+    
+    //sets pickerview to start at the middle index of its objects
     [self.picker selectRow:((self.tags.count)/2) inComponent:0 animated:NO];
+    
+    //sets patchcolor equal to color selected by picker at start of app
+    [_drawView setPathColor:[self.colors objectAtIndex:(self.tags.count/2)]];
+    
 } 
 
+
+//makes the title of the rows in pickerview the object at that index of
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [self.tags objectAtIndex:row];
 }
 
+
+//sets the iew for each individual row in picker view.  Makes a rectange, rotates it to be vertical, sets
+//text to the objects in tags, set color to corresponding object in colors array
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view{
     CGRect rect = CGRectMake(0, 0, 120, 80);
     UILabel *label = [[UILabel alloc]initWithFrame:rect];
@@ -38,48 +55,63 @@
     [label setTransform:rotate];
     label.text = [self.tags objectAtIndex:row];
     label.font = [UIFont systemFontOfSize:22.0];
+    label.textColor = [_colors objectAtIndex:row];
     label.textAlignment = UITextAlignmentCenter;
     label.numberOfLines = 2;
     label.clipsToBounds = YES;
     return label ;
 }
+
+//number of rows in picker equal to number of colors available
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     return self.tags.count;
 }
+
+//only one "Wheel" for picker
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
 }
 
+//sets color of paths equal to object in colors array based on corresponding row selected in picker
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     switch(row)
     {
         case(0):
-            [_drawView setPathColor:[UIColor blueColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:0]];
             break;
         case(1):
-            [_drawView setPathColor:[UIColor redColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:1]];
             break;
         case(2):
-            [_drawView setPathColor:[UIColor yellowColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:2]];
             break;
         case(3):
-            [_drawView setPathColor:[UIColor greenColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:3]];
             break;
         case(4):
-            [_drawView setPathColor:[UIColor purpleColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:4]];
             break;
         case(5):
-            [_drawView setPathColor:[UIColor blackColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:5]];
             break;
         case(6):
-            [_drawView setPathColor:[UIColor orangeColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:6]];
             break;
         case(7):
-            [_drawView setPathColor:[UIColor grayColor]];
+            [_drawView setPathColor:[_colors objectAtIndex:7]];
+            break;
+        case(8):
+            [_drawView setPathColor:[_colors objectAtIndex:8]];
+            break;
+        case(9):
+            [_drawView setPathColor:[_colors objectAtIndex:9]];
+            break;
+        case(10):
+            [_drawView setPathColor:[_colors objectAtIndex:10]];
             break;
     }
 }
@@ -96,20 +128,25 @@
     }
 }
 
+
+//sets height of each row in picker
 -(CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component
 {
     return 25.0;
 }
 
+//this action is linked to eraser button, draws white on top of frame
 - (IBAction)changePathColor:(UIButton *)sender
 {
     [_drawView setPathColor:[UIColor whiteColor]];
 }
 
+//sets sizew of stroke to
 - (IBAction)changeSize:(UISlider *)sender
 {
     _drawView.pathWidth = sender.value;
 }
+
 
 - (IBAction)undo:(id)sender
 {
@@ -158,24 +195,7 @@
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    float actualHeight = image.size.height;
-    float actualWidth = image.size.width;
-    float imgRatio = actualWidth/actualHeight;
-    float maxRatio = 320.0/374.0;
-    
-    if(imgRatio!=maxRatio){
-        if(imgRatio < maxRatio){
-            imgRatio = 374.0 / actualHeight;
-            actualWidth = imgRatio * actualWidth;
-            actualHeight = 374.0;
-        }
-        else{
-            imgRatio = 320.0 / actualWidth;
-            actualHeight = imgRatio * actualHeight;
-            actualWidth = 320.0;
-        }
-    }
-    
+   
     CGRect rect = CGRectMake(0.0, 0.0, 320.0, 374.0);
     UIGraphicsBeginImageContext(rect.size);
     [image drawInRect:rect];
