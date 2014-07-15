@@ -24,6 +24,8 @@
 		FB14942B19659A100057CAA8 /* ColoredBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14942A19659A100057CAA8 /* ColoredBezierPath.m */; };
 		FB14943519659E030057CAA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB14943419659E030057CAA8 /* Social.framework */; };
 		FB14943E1965ACD60057CAA8 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB14943D1965ACD60057CAA8 /* DrawingView.m */; };
+		FB53A70F196D9430008E633C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB53A70E196D9430008E633C /* AVFoundation.framework */; };
+		FB53A711196D9445008E633C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB53A710196D9445008E633C /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		FB14943419659E030057CAA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FB14943C1965ACD60057CAA8 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
 		FB14943D1965ACD60057CAA8 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		FB53A70E196D9430008E633C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FB53A710196D9445008E633C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB53A711196D9445008E633C /* AudioToolbox.framework in Frameworks */,
+				FB53A70F196D9430008E633C /* AVFoundation.framework in Frameworks */,
 				FB14943519659E030057CAA8 /* Social.framework in Frameworks */,
 				FB1493F7196593410057CAA8 /* CoreGraphics.framework in Frameworks */,
 				FB1493F9196593410057CAA8 /* UIKit.framework in Frameworks */,
@@ -110,6 +116,8 @@
 		FB1493F3196593410057CAA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FB53A710196D9445008E633C /* AudioToolbox.framework */,
+				FB53A70E196D9430008E633C /* AVFoundation.framework */,
 				FB14943419659E030057CAA8 /* Social.framework */,
 				FB1493F4196593410057CAA8 /* Foundation.framework */,
 				FB1493F6196593410057CAA8 /* CoreGraphics.framework */,

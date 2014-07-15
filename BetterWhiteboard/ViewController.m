@@ -16,12 +16,17 @@
 
 -(void)viewDidLoad
 {
+    
+    NSURL *soundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"rick" ofType:@"wav"]];
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef) soundURL, &playSoundID);
+    
+    
     [super viewDidLoad];
     //fills array with names of all colors available, for labels in picker view
     self.tags = [[NSArray alloc] initWithObjects:@"Red", @"Orange", @"Yellow", @"Green", @"Blue", @"Indigo", @"Violet", @"Gray", @"Black", @"Pink", @"Brown", nil];
     
     //populates colors array with UIColor objects accompanying the names above, same index
-    self.colors = [[NSArray alloc] initWithObjects:[UIColor redColor], [UIColor orangeColor], [UIColor yellowColor], [UIColor colorWithRed:(87.0/255.0) green:(201.0/255.0) blue:(21.0/255.0) alpha:1], [UIColor blueColor], [UIColor colorWithRed:(75.0/255.0) green:(0.0/255.0) blue:(130.0/255.0) alpha:1], [UIColor purpleColor], [UIColor grayColor], [UIColor blackColor], [UIColor colorWithRed:(255.0/255.0) green:(105.0/255.0) blue:(180.0/255.0) alpha:1], [UIColor brownColor], nil];
+    self.colors = [[NSArray alloc] initWithObjects:[UIColor redColor], [UIColor orangeColor], [UIColor colorWithRed:(233.0/225.0) green:(226.0/255.0) blue:(22.0/255.0) alpha:1], [UIColor colorWithRed:(87.0/255.0) green:(201.0/255.0) blue:(21.0/255.0) alpha:1], [UIColor blueColor], [UIColor colorWithRed:(75.0/255.0) green:(0.0/255.0) blue:(130.0/255.0) alpha:1], [UIColor purpleColor], [UIColor grayColor], [UIColor blackColor], [UIColor colorWithRed:(255.0/255.0) green:(105.0/255.0) blue:(180.0/255.0) alpha:1], [UIColor brownColor], nil];
     
     //rotates picker view so that it is horizontal instead of vertical
     self.picker.showsSelectionIndicator =YES;
@@ -35,7 +40,7 @@
     //sets patchcolor equal to color selected by picker at start of app
     [_drawView setPathColor:[self.colors objectAtIndex:(self.tags.count/2)]];
     
-} 
+}
 
 
 //makes the title of the rows in pickerview the object at that index of
@@ -135,6 +140,13 @@
     return 25.0;
 }
 
+
+- (IBAction)rickAndMorty:(id)sender
+{
+    AudioServicesPlaySystemSound(playSoundID);
+    
+}
+
 //this action is linked to eraser button, draws white on top of frame
 - (IBAction)changePathColor:(UIButton *)sender
 {
@@ -147,7 +159,7 @@
     _drawView.pathWidth = sender.value;
 }
 
-
+//removes last path in the path array
 - (IBAction)undo:(id)sender
 {
     //removes last path from _paths
@@ -156,6 +168,7 @@
     [_drawView setNeedsDisplay];
 }
 
+//saves contents of drawview to photo library
 - (IBAction)save:(id)sender
 {
     UIGraphicsBeginImageContext(_drawView.bounds.size);
@@ -168,6 +181,7 @@
     UIImageWriteToSavedPhotosAlbum(img, nil, nil, nil);
 }
 
+//camera button functionality
 - (IBAction)cameraPressed:(id)sender
 {
 
@@ -176,6 +190,8 @@
     [alert show];
     
 }
+
+//allows user to either take a picture or pick an existing picture to set as background
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -192,6 +208,7 @@
     }
 }
 
+//allows for image to be set as the background for the drawing view
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];

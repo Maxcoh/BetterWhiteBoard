@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 #import "DrawingView.h"
 
 
-@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIAlertViewDelegate, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>{
+    
+    SystemSoundID playSoundID;
+}
 
 @property (weak, nonatomic) IBOutlet DrawingView *drawView;
 
@@ -21,6 +25,9 @@
 @property (strong, nonatomic) NSString *selectedColor;
 @property (strong, nonatomic) UILabel *label;
 
+
+
+- (IBAction)rickAndMorty:(id)sender;
 
 - (IBAction)changePathColor:(id)sender;
 - (IBAction)changeSize:(id)sender;
